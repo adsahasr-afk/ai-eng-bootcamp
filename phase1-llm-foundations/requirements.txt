@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+anthropic
+python-dotenv
+pydantic
+# After first install, freeze exact versions for reproducibility:
+#   pip freeze > requirements.txt
