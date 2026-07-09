@@ -1,0 +1,6 @@
+# Pin as you go. Nothing installed by bootstrap - HITL.
+# Phase 1
+# anthropic
+# fastapi
+# uvicorn
+# python-dotenv
