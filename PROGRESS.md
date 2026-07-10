@@ -13,11 +13,13 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 
 ## Current Status
 
-- **Phase:** 1 — LLM Foundations & API Fluency
-- **Week:** 1 of 8
-- **Focus this week:** environment done → build first end-to-end LLM app
-- **Current streak:** 0 days
-- **Next action:** create venv + FastAPI "hello LLM" app
+## Current Status
+
+- **Phase:** 1 COMPLETE → starting Phase 2 (RAG Architecture & Evaluation)
+- **Week:** 2 of 8
+- **Focus this week:** kick off RAG — document loading, chunking, embeddings, vector store
+- **Current streak:** 3 days
+- **Next action:** scaffold phase2-rag/ (optional carryover: streaming endpoint to close Phase 1)
 
 ---
 
@@ -26,11 +28,12 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 ## Daily Log
 
 
-| Date       | Day | Hrs | Phase   | What I did                                                                           | Blockers / Questions                                                | Commit                 |
-| ---------- | --- | --- | ------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | ---------------------- |
-| 2026-07-09 | 1   | 1.0 | Setup   | WSL2 + Python + Git + GitHub verified, project scaffolded                            | —                                                                   | scaffold               |
-| 2026-07-09 | 1   | 1.0 | Phase 1 | Built + ran FastAPI hello-LLM app in mock mode; /health and /chat working end-to-end | Needed python3-venv + pip installed; API key deferred (no card yet) | feat: phase1 hello-LLM |
-| 2026-07-11 | 3   | 0.5 | Phase 1 | Added billing + API key, went live; /chat returns real Claude replies with token counts | Console requires workspace-scoped key (used Default) | live api |
+| Date       | Day | Hrs | Phase   | What I did                                                                              | Blockers / Questions                                                | Commit                 |
+| ---------- | --- | --- | ------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------- |
+| 2026-07-09 | 1   | 1.0 | Setup   | WSL2 + Python + Git + GitHub verified, project scaffolded                               | —                                                                   | scaffold               |
+| 2026-07-09 | 1   | 1.0 | Phase 1 | Built + ran FastAPI hello-LLM app in mock mode; /health and /chat working end-to-end    | Needed python3-venv + pip installed; API key deferred (no card yet) | feat: phase1 hello-LLM |
+| 2026-07-11 | 3   | 0.5 | Phase 1 | Added billing + API key, went live; /chat returns real Claude replies with token counts | Console requires workspace-scoped key (used Default)                | live api               |
+
 
 ---
 
@@ -44,14 +47,14 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 
 Goal: understand how LLMs work, use the major APIs confidently, ship a first AI app end-to-end.
 
-- [ ] Anthropic API key working from `.env` (never committed)
-- [ ] First API call (single prompt → response)
+- [x] Anthropic API key working from `.env` (never committed)
+- [x] First API call (single prompt → response)
 - [ ] Streaming responses
 - [ ] System prompts + multi-turn messages
 - [ ] Token counting / cost awareness
 - [ ] FastAPI `/chat` endpoint wrapping the model
-- [ ] Run app locally end-to-end
-- [ ] Committed + pushed to GitHub
+- [x] Run app locally end-to-end
+- [x] Committed + pushed to GitHub
 
 
 
