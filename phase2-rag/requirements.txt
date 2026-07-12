@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+anthropic
+python-dotenv
+pydantic
+sentence-transformers
+chromadb
+# Note: sentence-transformers pulls in torch -> this install is large
+# (hundreds of MB) and may take a few minutes on first run.

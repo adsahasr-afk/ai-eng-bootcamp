@@ -15,11 +15,11 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 
 ## Current Status
 
-- **Phase:** 1 COMPLETE → starting Phase 2 (RAG Architecture & Evaluation)
-- **Week:** 2 of 8
-- **Focus this week:** kick off RAG — document loading, chunking, embeddings, vector store
-- **Current streak:** 3 days
-- **Next action:** scaffold phase2-rag/ (optional carryover: streaming endpoint to close Phase 1)
+## Current Status
+- Phase: 2 IN PROGRESS - RAG Architecture & Evaluation
+- Week: 2 of 8
+- Current streak: (your call - bump it)
+- Next action: pip install, run ingest.py, test /ask; then add RAGAS eval harness
 
 ---
 
@@ -32,9 +32,9 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 | ---------- | --- | --- | ------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------- |
 | 2026-07-09 | 1   | 1.0 | Setup   | WSL2 + Python + Git + GitHub verified, project scaffolded                               | —                                                                   | scaffold               |
 | 2026-07-09 | 1   | 1.0 | Phase 1 | Built + ran FastAPI hello-LLM app in mock mode; /health and /chat working end-to-end    | Needed python3-venv + pip installed; API key deferred (no card yet) | feat: phase1 hello-LLM |
-| 2026-07-11 | 3   | 0.5 | Phase 1 | Added billing + API key, went live; /chat returns real Claude replies with token counts | Console requires workspace-scoped key (used Default)                | live api               |
-
-
+| 2026-07-10 | 3   | 0.5 | Phase 1 | Added billing + API key, went live; /chat returns real Claude replies with token counts | Console requires workspace-scoped key (used Default)                | live api               |
+| 2026-07-12 | 4   | 1.0 | Phase 2 | Scaffolded from-scratch RAG pipeline: chunking, local embeddings (sentence-transformers), Chroma store, retrieval+grounded /ask, sample docs | Separate venv + .env per project (reused Phase 1 key) | feat: phase2 rag scaffold |
+| 2026-07-12 | 4   | 1.5 | Phase 2 | RAG live end-to-end: ingested 7 chunks, /ask returns grounded, cited answers; understood chunking + TOP_K retrieval behavior | Noted retrieval precision + citation-faithfulness gaps (deferred, not broken) | feat: phase2 rag working |
 ---
 
 
@@ -43,7 +43,7 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 
 
 
-### Phase 1 — LLM Foundations & API Fluency (Weeks 1–2)
+### Phase 1 — LLM Foundations & API Fluency (Week 1 of 8)
 
 Goal: understand how LLMs work, use the major APIs confidently, ship a first AI app end-to-end.
 
@@ -58,13 +58,13 @@ Goal: understand how LLMs work, use the major APIs confidently, ship a first AI 
 
 
 
-### Phase 2 — RAG Architecture & Evaluation (Weeks 3–4)
+### Phase 2 — RAG Architecture & Evaluation (Week 2 of 8)
 
 Goal: design, build, and systematically evaluate a production-grade RAG system.
 
 - [ ] Document loading + chunking (compare strategies)
-- [ ] Embeddings + vector store
-- [ ] Retrieval + prompt assembly
+- [x] Embeddings + vector store
+- [x] Retrieval + prompt assembly
 - [ ] Hybrid retrieval / reranking
 - [ ] Eval harness (RAGAS: faithfulness, relevancy)
 - [ ] Documented eval metrics in README
