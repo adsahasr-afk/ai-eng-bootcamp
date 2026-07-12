@@ -73,6 +73,19 @@ Scoring: aim to answer **YES** (or N/A) to every item before deploy. Any NO is a
 - [ ] **Leaked-link test:** open the preview URL in a clean/incognito browser with no login — confirm no sensitive data is reachable.
 - [ ] Re-run this pass **after any AI regeneration** — generators frequently reintroduce disabled RLS or re-embed secrets.
 
+## 10. Repo & development hygiene (before code ever reaches a host)
+
+The threat here isn't the deployed app — it's a secret leaking off your machine via git or a compromised dependency. A `git push` is outbound and you-initiated; the real risk is local code running with your permissions, or an accidental commit.
+
+- [ ] `.gitignore` covers `.env`, credential files, and local data/index dirs — verified with `git check-ignore .env`.
+- [ ] Ran `git status` before every push; confirmed no secret/`.env` is staged.
+- [ ] History is clean: `git log -S "sk-" --all` (and `git log --all -- "**/.env"`) return nothing. A secret committed *once* lives in history forever.
+- [ ] A secret scanner runs as a pre-commit hook (gitleaks or git-secrets) to block key-shaped strings.
+- [ ] GitHub push protection / secret scanning is enabled on the repo as a server-side net.
+- [ ] Dependencies vetted before install (known packages, pinned versions, watch for typosquats); same for editor/IDE extensions — both run with your full local access.
+- [ ] Never used `git add -f` on an ignored file.
+- [ ] Strong posture: secrets live outside the repo working tree (vault or shell env), so a stray `git add -A` can't catch them.
+- [ ] Blast radius limited: API keys have spend caps + expiry, and are rotated immediately if ever exposed.
 ---
 
 ### The one-line summary
