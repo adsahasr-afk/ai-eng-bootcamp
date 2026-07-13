@@ -15,7 +15,7 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 80
 
 # Retrieval: how many chunks to pull per question.
-TOP_K = 4
+TOP_K = 2
 
 # Generation reuses your Phase 1 Anthropic setup.
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-5")

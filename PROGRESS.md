@@ -35,6 +35,7 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 | 2026-07-10 | 3   | 0.5 | Phase 1 | Added billing + API key, went live; /chat returns real Claude replies with token counts | Console requires workspace-scoped key (used Default)                | live api               |
 | 2026-07-12 | 4   | 1.0 | Phase 2 | Scaffolded from-scratch RAG pipeline: chunking, local embeddings (sentence-transformers), Chroma store, retrieval+grounded /ask, sample docs | Separate venv + .env per project (reused Phase 1 key) | feat: phase2 rag scaffold |
 | 2026-07-12 | 4   | 1.5 | Phase 2 | RAG live end-to-end: ingested 7 chunks, /ask returns grounded, cited answers; understood chunking + TOP_K retrieval behavior | Noted retrieval precision + citation-faithfulness gaps (deferred, not broken) | feat: phase2 rag working |
+| 2026-07-13 | 5   | 2.0 | Phase 2 | Built from-scratch eval harness (5 metrics + abstention) and config sweep w/ variance; found chunk_size the dominant lever, tuned to 500/TOP_K=2 | LLM-judge variance -> used repeats; n=7 small | feat: phase2 eval + sweep |
 ---
 
 
@@ -62,13 +63,13 @@ Goal: understand how LLMs work, use the major APIs confidently, ship a first AI 
 
 Goal: design, build, and systematically evaluate a production-grade RAG system.
 
-- [ ] Document loading + chunking (compare strategies)
+- [x] Document loading + chunking (compare strategies)
 - [x] Embeddings + vector store
 - [x] Retrieval + prompt assembly
 - [ ] Hybrid retrieval / reranking
-- [ ] Eval harness (RAGAS: faithfulness, relevancy)
-- [ ] Documented eval metrics in README
-- [ ] Committed + pushed
+- [x] Eval harness (RAGAS: faithfulness, relevancy)
+- [x] Documented eval metrics in README
+- [x] Committed + pushed
 
 
 
