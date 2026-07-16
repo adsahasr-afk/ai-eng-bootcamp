@@ -31,6 +31,7 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 | 2026-07-12 | 4   | 1.0 | Phase 2 | Scaffolded from-scratch RAG pipeline: chunking, local embeddings (sentence-transformers), Chroma store, retrieval+grounded /ask, sample docs | Separate venv + .env per project (reused Phase 1 key) | feat: phase2 rag scaffold |
 | 2026-07-12 | 4   | 1.5 | Phase 2 | RAG live end-to-end: ingested 7 chunks, /ask returns grounded, cited answers; understood chunking + TOP_K retrieval behavior | Noted retrieval precision + citation-faithfulness gaps (deferred, not broken) | feat: phase2 rag working |
 | 2026-07-13 | 5   | 2.0 | Phase 2 | Built from-scratch eval harness (5 metrics + abstention) and config sweep w/ variance; found chunk_size the dominant lever, tuned to 500/TOP_K=2 | LLM-judge variance -> used repeats; n=7 small | feat: phase2 eval + sweep |
+| 2026-07-14 | 6   | 1.5 | Phase 3 | From-scratch ReAct agent (Claude tool-use): calculator + KB-lookup reusing Phase 2 RAG; multi-tool chaining + runaway guard verified | .env doesn't hot-reload — restart to apply config | feat: phase3 react agent |
 ---
 
 
@@ -61,7 +62,7 @@ Goal: design, build, and systematically evaluate a production-grade RAG system.
 - [x] Document loading + chunking (compare strategies)
 - [x] Embeddings + vector store
 - [x] Retrieval + prompt assembly
-- [ ] Hybrid retrieval / reranking
+- [x] Hybrid retrieval / reranking
 - [x] Eval harness (RAGAS: faithfulness, relevancy)
 - [x] Documented eval metrics in README
 - [x] Committed + pushed
@@ -72,10 +73,10 @@ Goal: design, build, and systematically evaluate a production-grade RAG system.
 
 Goal: build autonomous agents that reason, plan, and use tools.
 
-- [ ] ReAct loop (reason → act → observe)
-- [ ] Tool calling + tool-error handling
-- [ ] Loop / runaway prevention
-- [ ] Multi-step task with 2+ tools
+- [x] ReAct loop (reason → act → observe)
+- [x] Tool calling + tool-error handling
+- [x] Loop / runaway prevention
+- [x] Multi-step task with 2+ tools
 - [ ] Orchestration (LangGraph or equivalent)
 - [ ] Committed + pushed
 
