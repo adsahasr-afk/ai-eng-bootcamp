@@ -19,3 +19,8 @@ TOP_K = 2
 
 # Generation reuses your Phase 1 Anthropic setup.
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-5")
+
+# ---- Reranking (local cross-encoder) ----
+FETCH_K = 8            # candidates retrieved before reranking (>= TOP_K)
+RERANK = False          # toggle the cross-encoder rerank stage
+RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"  # local, ~80MB first run

@@ -12,16 +12,11 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 ---
 
 ## Current Status
-
-## Current Status
-
-## Current Status
-- Phase: 2 IN PROGRESS - RAG Architecture & Evaluation
+- Phase: 2 — RAG (nearly complete; reranking is the last checklist item)
 - Week: 2 of 8
-- Current streak: (your call - bump it)
-- Next action: pip install, run ingest.py, test /ask; then add RAGAS eval harness
-
----
+- Current streak: 5
+- Next action: add reranking (retrieve-wide → rerank → keep TOP_K), measure lift with eval harness
+--
 
 
 
@@ -52,8 +47,8 @@ Goal: understand how LLMs work, use the major APIs confidently, ship a first AI 
 - [x] First API call (single prompt → response)
 - [ ] Streaming responses
 - [ ] System prompts + multi-turn messages
-- [ ] Token counting / cost awareness
-- [ ] FastAPI `/chat` endpoint wrapping the model
+- [x] Token counting / cost awareness
+- [x] FastAPI `/chat` endpoint wrapping the model
 - [x] Run app locally end-to-end
 - [x] Committed + pushed to GitHub
 
