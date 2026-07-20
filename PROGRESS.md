@@ -82,7 +82,7 @@ Goal: build autonomous agents that reason, plan, and use tools.
 - [x] Loop / runaway prevention
 - [x] Multi-step task with 2+ tools
 - [ ] Orchestration (LangGraph or equivalent)
-- [ ] Committed + pushed
+- [x] Committed + pushed
 
 
 
@@ -94,8 +94,8 @@ Goal: package, observe, evaluate continuously, and ship.
 - [x] Observability (Langfuse traces)
 - [x] Continuous evals in CI (prompt-regression check)
 - [ ] Deployed with a **live URL**
-- [ ] Architecture diagram in README
-- [ ] Committed + pushed
+- [x] Architecture diagram in README
+- [x] Committed + pushed
 
 ---
 
