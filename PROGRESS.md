@@ -12,10 +12,10 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 ---
 
 ## Current Status
-- Phase: 2 — RAG (nearly complete; reranking is the last checklist item)
-- Week: 2 of 8
-- Current streak: 5
-- Next action: add reranking (retrieve-wide → rerank → keep TOP_K), measure lift with eval harness
+- Phase: 3 complete (core) — from-scratch ReAct agent working (LangGraph optional)
+- Week: 3 of 8
+- Current streak: 6
+- Next action: start Phase 4 (LLMOps) — Docker, observability, deploy to a live URL
 --
 
 

@@ -1,0 +1,14 @@
+services:
+  rag:
+    build: .
+    image: bootcamp-rag:latest
+    # Secrets are injected at RUNTIME from .env - never baked into the image.
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    volumes:
+      # Persist the vector index outside the image, and let you edit docs live.
+      - ./.chroma:/app/.chroma
+      - ./sample_docs:/app/sample_docs
+    restart: unless-stopped

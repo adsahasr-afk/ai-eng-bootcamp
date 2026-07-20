@@ -48,4 +48,6 @@ GOLDEN = [
 ADVERSARIAL = [
     "What is the company's parental leave policy?",
     "In which programming language was Acme Robotics' first product written?",
+       "How many employees does Acme Robotics have?",
+    "What is the company's stock ticker symbol?",
 ]
