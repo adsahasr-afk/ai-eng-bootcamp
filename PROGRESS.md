@@ -12,10 +12,14 @@ Daily log for the 8-week / 4-phase curriculum. Update it at the end of each sess
 ---
 
 ## Current Status
-- Phase: 3 complete (core) — from-scratch ReAct agent working (LangGraph optional)
-- Week: 3 of 8
-- Current streak: 6
-- Next action: start Phase 4 (LLMOps) — Docker, observability, deploy to a live URL
+- Phase: 4 IN PROGRESS - LLMOps, Observability & Production
+- Week: 4 of 8
+- Current streak: 7
+- Done in P4: containerized RAG service (Docker), structured JSON observability
+  (latency/tokens/cost/sources), two-tier continuous evaluation (free CI tests +
+  local paid eval gate - all 6 metrics passing)
+- Next action: architecture diagram in README; then decide on public deploy
+  (needs auth + rate limiting first - endpoint proxies a paid LLM)
 --
 
 
@@ -86,9 +90,9 @@ Goal: build autonomous agents that reason, plan, and use tools.
 
 Goal: package, observe, evaluate continuously, and ship.
 
-- [ ] Dockerfile + containerized run
-- [ ] Observability (Langfuse traces)
-- [ ] Continuous evals in CI (prompt-regression check)
+- [x] Dockerfile + containerized run
+- [x] Observability (Langfuse traces)
+- [x] Continuous evals in CI (prompt-regression check)
 - [ ] Deployed with a **live URL**
 - [ ] Architecture diagram in README
 - [ ] Committed + pushed
